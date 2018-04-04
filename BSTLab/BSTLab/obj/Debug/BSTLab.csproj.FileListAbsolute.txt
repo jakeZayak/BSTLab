@@ -1,0 +1,7 @@
+C:\Users\jthomas2600\OneDrive - York Technical College\Teaching\2018SP\CPT-244\BSTLab\BSTLab\BSTLab\bin\Debug\BSTLab.exe.config
+C:\Users\jthomas2600\OneDrive - York Technical College\Teaching\2018SP\CPT-244\BSTLab\BSTLab\BSTLab\bin\Debug\BSTLab.exe
+C:\Users\jthomas2600\OneDrive - York Technical College\Teaching\2018SP\CPT-244\BSTLab\BSTLab\BSTLab\bin\Debug\BSTLab.pdb
+C:\Users\jthomas2600\OneDrive - York Technical College\Teaching\2018SP\CPT-244\BSTLab\BSTLab\BSTLab\obj\Debug\BSTLab.csprojResolveAssemblyReference.cache
+C:\Users\jthomas2600\OneDrive - York Technical College\Teaching\2018SP\CPT-244\BSTLab\BSTLab\BSTLab\obj\Debug\BSTLab.csproj.CoreCompileInputs.cache
+C:\Users\jthomas2600\OneDrive - York Technical College\Teaching\2018SP\CPT-244\BSTLab\BSTLab\BSTLab\obj\Debug\BSTLab.exe
+C:\Users\jthomas2600\OneDrive - York Technical College\Teaching\2018SP\CPT-244\BSTLab\BSTLab\BSTLab\obj\Debug\BSTLab.pdb
