@@ -52,6 +52,11 @@ namespace BSTLab
 
         public bool Remove(T item)
         {
+            if (Root == null)
+            {
+                return false;
+            }
+            BinaryTreeNode<T> current = Root;
             //This code will need to be updated for the Binary Search Tree Lab.
             return false;
         }
