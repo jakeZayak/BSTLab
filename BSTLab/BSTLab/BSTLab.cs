@@ -40,9 +40,16 @@ namespace BSTLab
             display("PostOrder:", bst.PostOrderTrav());
             display("Add and Remove");
             bst.Add(33);
-            bst.Remove(41);
+            display("InOrder:", bst.InOrderTrav());
+            display("PreOrder:", bst.PreOrderTrav());
+            display("PostOrder:", bst.PostOrderTrav());
+            
             bst.Remove(13);
-            bst.Remove(99);
+            bst.Remove(9);
+            bst.Remove(41);
+            display("InOrder:", bst.InOrderTrav());
+            display("PreOrder:", bst.PreOrderTrav());
+            display("PostOrder:", bst.PostOrderTrav());
             bst.Add(14);
             display("InOrder:", bst.InOrderTrav());
             display("PreOrder:", bst.PreOrderTrav());
