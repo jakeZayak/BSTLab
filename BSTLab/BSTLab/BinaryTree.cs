@@ -1,8 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/******************************************************************
+ * Binary Search Tree Implementation
+ * Author: Jake Zayak
+ * Creation Date:  3/23/2018
+ * Version 1.7 
+ * Last Updated: 4/27/18
+ * ***************************************************************/
 
 namespace BSTLab
 {

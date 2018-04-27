@@ -1,8 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/******************************************************************
+ * Binary Search Tree Implementation
+ * Author: Jake Zayak
+ * Creation Date:  3/23/2018
+ * Version 1.7 
+ * Last Updated: 4/27/18
+ * Using Deletion Method from Microsoft:
+ * https://msdn.microsoft.com/en-US/library/ms379570(v=vs.80).aspx
+ * Adjusted for use within this program.
+ * ***************************************************************/
+
+using System;
 
 namespace BSTLab
 {
@@ -14,7 +21,7 @@ namespace BSTLab
         {
             BinaryTreeNode<T> newNode = new BinaryTreeNode<T>(item);
 
-            int compResult;
+            int compResult; //Holds the IComparable results between nodes
 
             BinaryTreeNode<T> current = Root;
             BinaryTreeNode<T> parent = null;
@@ -23,72 +30,84 @@ namespace BSTLab
             {
                 compResult = ((IComparable<T>)(current.Item)).CompareTo(item);
 
-                if (compResult == 0)
-                    return;
-                else if (compResult > 0)
+                
+                if (compResult == 0) // if the item is EQUAL to the current
                 {
                     parent = current;
                     current = current.Left;
                 }
-                else if (compResult < 0)
+                else if (compResult > 0) //if the item is GREATER than the current
+                {
+                    parent = current;
+                    current = current.Left;
+                }
+                else if (compResult < 0) //if the item is LESS than the current
                 {
                     parent = current;
                     current = current.Right;
                 }
             }
 
+            //if the tree is empty, adding a new node adds to the root
             if (parent == null)
                 Root = newNode;
+            //based on IComparable, inserts the new node to the left or right
             else
             {
                 compResult = ((IComparable<T>)(parent.Item)).CompareTo(item);
 
                 if (compResult > 0)
                     parent.Left = newNode;
-                else
+                else if (compResult < 0)
                     parent.Right = newNode;
+                else
+                    parent.Left = newNode;
             }
             Console.WriteLine("Added: " + item);
         }
 
+        /* ****************************************************************
+         * Using Deletion Method from Microsof
+         * https://msdn.microsoft.com/en-US/library/ms379570(v=vs.80).aspx
+         * Remove is almost mirror image of Add, with the exception of
+         * moving items up or down the tree. 
+         ******************************************************************/
         public bool Remove(T item)
         {
-            // first make sure there exist some items in this tree
+            //EMPTY TREE
             if (Root == null)
-            {
-                return false;
-            }// no items to remove
-            int compResult;
-            // Now, try to find data in the tree
+                return false;       // no items to remove
+
+
             BinaryTreeNode<T> current = Root, parent = null;
-            compResult = ((IComparable<T>)(Root.Item)).CompareTo(current.Item);
+            int compResult = ((IComparable<T>)(current.Item)).CompareTo(item);
             while (compResult != 0)
             {
+                // item > current.Value
                 if (compResult > 0)
                 {
-                    // current.Value > data, if data exists it's in the left subtree
                     parent = current;
                     current = current.Left;
                 }
+                // item < current.Value
                 else if (compResult < 0)
                 {
-                    // current.Value < data, if data exists it's in the right subtree
                     parent = current;
                     current = current.Right;
                 }
-
-                // If current == null, then we didn't find the item to remove
+                //Item not found, no additional work required.                
                 if (current == null)
+                {
+                    Console.WriteLine(item + " not found in BST, item not removed.");
                     return false;
+                }
                 else
-                    compResult = ((IComparable<T>)(parent.Item)).CompareTo(current.Item);
+                {
+                    compResult = ((IComparable<T>)(current.Item)).CompareTo(item);
+                }
             }
 
-            // At this point, we've found the node to remove
-            //count--;
-
-            // We now need to "rethread" the tree
-            // CASE 1: If current has no right child, then current's left child becomes
+            //If current has no right child, then current's left child becomes
             //         the node pointed to by the parent
             if (current.Right == null)
             {
@@ -105,7 +124,7 @@ namespace BSTLab
                         parent.Right = current.Left;
                 }
             }
-            // CASE 2: If current's right child has no left child, then current's right child
+            //If current's right child has no left child, then current's right child
             //         replaces current in the tree
             else if (current.Right.Left == null)
             {
@@ -117,14 +136,14 @@ namespace BSTLab
                 {
                     compResult = ((IComparable<T>)(parent.Item)).CompareTo(current.Item);
                     if (compResult > 0)
-                        // parent.Value > current.Value, so make current's right child a left child of parent
+                        // parent.Item > current.Item, so make current's right child a left child of parent
                         parent.Left = current.Right;
                     else if (compResult < 0)
-                        // parent.Value < current.Value, so make current's right child a right child of parent
+                        // parent.Item < current.Item, so make current's right child a right child of parent
                         parent.Right = current.Right;
                 }
             }
-            // CASE 3: If current's right child has a left child, replace current with current's
+            //If current's right child has a left child, replace current with current's
             //          right child's left-most descendent
             else
             {

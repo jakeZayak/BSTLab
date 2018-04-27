@@ -12,3 +12,10 @@ C:\Users\jzayak9853\Desktop\BSTLab\BSTLab\BSTLab\obj\Debug\BSTLab.csprojResolveA
 C:\Users\jzayak9853\Desktop\BSTLab\BSTLab\BSTLab\obj\Debug\BSTLab.csproj.CoreCompileInputs.cache
 C:\Users\jzayak9853\Desktop\BSTLab\BSTLab\BSTLab\obj\Debug\BSTLab.exe
 C:\Users\jzayak9853\Desktop\BSTLab\BSTLab\BSTLab\obj\Debug\BSTLab.pdb
+C:\Users\jzayak9853\Desktop\Class\BSTLab\BSTLab\BSTLab\bin\Debug\BSTLab.exe.config
+C:\Users\jzayak9853\Desktop\Class\BSTLab\BSTLab\BSTLab\bin\Debug\BSTLab.exe
+C:\Users\jzayak9853\Desktop\Class\BSTLab\BSTLab\BSTLab\bin\Debug\BSTLab.pdb
+C:\Users\jzayak9853\Desktop\Class\BSTLab\BSTLab\BSTLab\obj\Debug\BSTLab.csprojResolveAssemblyReference.cache
+C:\Users\jzayak9853\Desktop\Class\BSTLab\BSTLab\BSTLab\obj\Debug\BSTLab.csproj.CoreCompileInputs.cache
+C:\Users\jzayak9853\Desktop\Class\BSTLab\BSTLab\BSTLab\obj\Debug\BSTLab.exe
+C:\Users\jzayak9853\Desktop\Class\BSTLab\BSTLab\BSTLab\obj\Debug\BSTLab.pdb

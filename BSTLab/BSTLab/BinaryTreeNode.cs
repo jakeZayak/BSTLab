@@ -1,10 +1,12 @@
-﻿/*
- * Author:  Jake Zayak
- * Date:  3/23/2018
+﻿/******************************************************************
+ * Binary Search Tree Implementation
+ * Author: Jake Zayak
+ * Creation Date:  3/23/2018
+ * Version 1.7 
+ * Last Updated: 4/27/18
  * Purpose:  This class implements a Binary Tree Node generically.
- * Version:  1.1
- * Last Update:  4/5/2018
- */
+ * ***************************************************************/
+
 
 namespace BSTLab
 {

@@ -1,8 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/******************************************************************
+ * Binary Search Tree Implementation
+ * Author: Jake Zayak
+ * Creation Date:  3/23/2018
+ * Version 1.7 
+ * Last Updated: 4/27/18
+ * ***************************************************************/
+
+using System;
 
 namespace BSTLab
 {
@@ -40,16 +44,9 @@ namespace BSTLab
             display("PostOrder:", bst.PostOrderTrav());
             display("Add and Remove");
             bst.Add(33);
-            display("InOrder:", bst.InOrderTrav());
-            display("PreOrder:", bst.PreOrderTrav());
-            display("PostOrder:", bst.PostOrderTrav());
-            
-            bst.Remove(13);
-            bst.Remove(9);
             bst.Remove(41);
-            display("InOrder:", bst.InOrderTrav());
-            display("PreOrder:", bst.PreOrderTrav());
-            display("PostOrder:", bst.PostOrderTrav());
+            bst.Remove(13);
+            bst.Remove(99);
             bst.Add(14);
             display("InOrder:", bst.InOrderTrav());
             display("PreOrder:", bst.PreOrderTrav());
